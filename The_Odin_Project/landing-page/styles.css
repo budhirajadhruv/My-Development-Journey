@@ -1,0 +1,165 @@
+body{
+    margin:0;
+    padding: 0;
+}
+
+ul,li{
+    list-style: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container{
+    background-color:#1f2937 ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+
+}
+
+.header-list{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: larger;   
+}
+
+.section-one
+{ margin-top: -20px;
+    background-color: #1f2937;
+    color: white;
+    display: flex;
+    justify-content:center; gap:400px;
+    height: 70vh;
+}
+
+.button-one{
+    background-color: #448cf4;
+    color: white;
+    border-radius: 10px;
+    width: 125px;
+    height: 40px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.div-one{
+    width: 25vw;
+    align-self: center;
+
+}
+
+.div-one-h1{
+    font-size: 50px;
+}
+
+img {
+  
+    background: url(http://goo.gl/vyAs27) no-repeat scroll 0 0;
+  }
+
+  .dog-image{
+    width: 300px;
+    height: 200px;
+    align-self: center ;
+  }
+
+  a{
+color: #a1a7ac;
+text-decoration: none;
+  }
+
+  .section-two{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.random{
+    display: flex;
+    gap: 30px;
+}
+  .square{
+    width: 130px;
+    height: 130px;
+    border: 4px solid #448cf4 ;
+    border-radius: 8px;
+  }
+
+  figcaption{
+    width: 127px;
+    text-align: center;
+  }
+
+  .section-three{
+    background-color: #e5e6ea;
+    color: black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quote{
+    padding-top: 80px;
+    width: 800px;
+  }
+
+  .section-four{
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    padding-top: 100px ;
+    padding-bottom: 100px ;
+  }
+
+  .container{
+    background-color: #448cf4;
+    height: 180px;
+    width: 1100px;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 170px;
+  }
+
+  .left{
+    color: white;
+    line-height: 10px;
+  }
+  .button-two{
+    background-color: #448cf4;
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    width: 135px;
+    height: 40px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.foot{
+    background-color: #1f2937;
+    width: 100vw;
+    height: 15vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+
+.quote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bq{
+    align-self: flex-end ;
+}
+
