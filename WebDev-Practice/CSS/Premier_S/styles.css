@@ -1,0 +1,364 @@
+
+@font-face {
+    font-family: Gilroy;
+    src: url(Gilroy-Light.ttf);
+}
+@font-face {
+    font-family: Monument;
+    src: url(Monument2.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,body{
+    width: 100%;
+    height:100%;
+}
+
+
+#main{
+    width: 100%;
+    height:100%;
+    /* good practice: parent is always relative as kids stay in control */
+    position: relative;
+    background-color: #f8f8f8;
+    padding-top: 0.01vh; /* why? to prevent css bug of moving the parent container down too for nav*/
+
+}
+
+#nav{
+    border-top: 0.3vh solid black;
+    border-bottom: 0.3vh solid black;
+    width: 100%;
+    height: 14vh;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#nav h1, h2,i{
+   
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+#nav h1{
+    font-family: Monument;
+    font-size: 2.5vw;
+    letter-spacing: -0.3vw;
+position: relative;
+}
+
+
+#nav h1::after{
+    content: "©️";
+    font-size: 1.1vw;
+    position: absolute;
+    bottom: 7vh;
+    left:16.8vw;
+}
+
+
+#nav h1::before{
+    content: "model management";
+    font-size: xx-small;
+    letter-spacing: 0.1px;
+    position: absolute;
+    bottom: 2.9vh;
+    left:5.6vw;
+}
+#nav h2{
+    border-right: 0.3vh solid black;
+    font-family: Gilroy; 
+}
+
+#nav :nth-last-child(1)
+{
+    width: 15%;
+    font-size: 30px;
+}
+
+#nav :nth-last-child(2)
+{
+    width: 25%;
+}
+
+#center{
+    width: 100%;
+    height: 83.5%;
+    padding: 4vw;
+    box-sizing: border-box;
+    position: relative;
+    /* always give relative to parent no matter what happens */
+}
+
+#content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#content video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#overlays{
+    padding-right: 0%;
+    position: relative;
+    /* adds blur */
+    background-color: black;
+    backdrop-filter: blur(10px);
+}
+#overlay-one{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: royalblue; */
+    color: white;
+    padding: 2vw;
+    width: 100%;
+    font-family: Monument;
+    font-size: x-large;
+    position: absolute;
+    bottom: 5vh;
+
+}
+
+#overlay-two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: Monument;
+    font-size: small;
+    width: 90%;
+    border-top: 0.2vh solid white;
+    position: absolute;
+    bottom: 3%;
+    padding-top: 0.2%;
+    margin-left: 2%;
+
+}
+
+#overlay-two img{
+    width: 4vw;
+    height: 9vh;
+}
+
+#overlay-one h2{
+    border: 1.5px solid white;
+    font-size: small;
+   width: 6vw;
+   height: 12vh;
+   border-radius: 50%;
+    padding: 2vw 0.1vw;
+}
+
+#scroll{
+    height: 40vh;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+    display: inline-block;
+    animation-name: anime;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+#scroll img{
+    margin: 0.5vw;
+    height: 80%;
+    border-radius: 50%;
+    width: 15.57%;
+    object-fit: cover;
+    /* to see all faces clearly: */
+    object-position: top;
+}
+
+@keyframes anime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
+
+
+#alphabet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    gap: 1.5vw;
+}
+
+#alphabet h3{
+    font-size: 1.5vw;
+    font-style: italic;
+    border-bottom: 2px solid black;
+   
+}
+
+#alphabet h4{
+    font-size: 0.7 vw;
+    font-weight: 100;
+    font-style: italic;
+    border: 0.15vw solid black;
+    padding: 0.5vw;
+    border-radius: 50%;
+    border:#f8f8f8;
+}
+
+#alphabet h4:hover{
+    border: 0.15vw solid black;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+
+#bottom{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    gap:10vw;
+    padding: 3vw;
+    font-family: Monument;
+}
+
+#img1 img{
+    width: 40vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+#img2 img{
+    width: 30vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+#text{
+    display: flex;
+    justify-content: space-around;
+    gap: 3vw;
+}
+
+#text h2{
+    font-size: 1.4vw;
+    width: 15vw;
+}
+
+#text h4{
+    font-size: 0.7vw;
+    width: 15vw;
+}
+
+
+#tab{
+    position: relative;
+    text-align: center;
+    margin-top:145vh;
+    font-family: Monument;
+    width: 100%;
+}
+
+.table{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw;
+    width: 90%;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+.table img{
+    width: 8vw;
+    height: 16vh;
+    border-radius:80%;
+    margin-right: 15vw;
+    object-fit: cover;
+    object-position: top;
+    opacity: 0;
+    transition: all ease 1s;
+    left:12%
+}
+
+.table:hover img{
+    opacity: 1;
+    left: 30%;
+}
+
+
+.table{
+    border-top: 1px solid black;
+}
+
+.table :nth-child(4){
+    border-bottom: 1px solid black;
+}
+
+.table h3{
+    width: min-content;
+    text-align: left;
+}
+
+.marque{
+    position: relative;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.marque h1{
+    font-family: Monument;
+    display: inline-block;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    white-space:0px;
+    font-size: 7vh;
+    height: 10vh;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
